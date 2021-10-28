@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var dirs_1 = require("./dirs");
-exports.OPENCV_CONTRIB_ARCHIVE = 'https://github.com/opencv/opencv_contrib/archive/3.4.6.tar.gz';
+exports.OPENCV_CONTRIB_ARCHIVE = 'https://github.com/opencv/opencv_contrib/archive/4.5.0.tar.gz';
 exports.opencvRepoUrl = 'https://github.com/opencv/opencv.git';
 exports.opencvContribRepoUrl = 'https://github.com/opencv/opencv_contrib.git';
 exports.opencvModules = [
@@ -22,7 +22,8 @@ exports.opencvModules = [
     'text',
     'tracking',
     'xfeatures2d',
-    'ximgproc'
+    'ximgproc',
+    'img_hash'
 ];
 exports.cmakeVsCompilers = {
     '10': 'Visual Studio 10 2010',
@@ -39,6 +40,7 @@ exports.cmakeArchs = {
 exports.defaultCmakeFlags = [
     "-DCMAKE_INSTALL_PREFIX=" + dirs_1.dirs.opencvBuild,
     '-DCMAKE_BUILD_TYPE=Release',
+    '-DCMAKE_CXX_STANDARD=14',
     '-DBUILD_EXAMPLES=OFF',
     '-DBUILD_DOCS=OFF',
     '-DBUILD_TESTS=OFF',
@@ -57,7 +59,6 @@ exports.defaultCmakeFlags = [
     '-DBUILD_opencv_hfs=OFF',
     '-DBUILD_opencv_java_bindings_generator=OFF',
     '-DBUILD_opencv_js=OFF',
-    '-DBUILD_opencv_img_hash=OFF',
     '-DBUILD_opencv_line_descriptor=OFF',
     '-DBUILD_opencv_optflow=OFF',
     '-DBUILD_opencv_phase_unwrapping=OFF',

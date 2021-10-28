@@ -1,6 +1,6 @@
 import { dirs } from './dirs';
 
-export const OPENCV_CONTRIB_ARCHIVE = 'https://github.com/opencv/opencv_contrib/archive/3.4.6.tar.gz'
+export const OPENCV_CONTRIB_ARCHIVE = 'https://github.com/opencv/opencv_contrib/archive/4.5.0.tar.gz'
 
 export const opencvRepoUrl = 'https://github.com/opencv/opencv.git'
 export const opencvContribRepoUrl = 'https://github.com/opencv/opencv_contrib.git'
@@ -23,7 +23,8 @@ export const opencvModules = [
   'text',
   'tracking',
   'xfeatures2d',
-  'ximgproc'
+  'ximgproc',
+  'img_hash'
 ]
 
 export const cmakeVsCompilers = {
@@ -61,7 +62,6 @@ export const defaultCmakeFlags = [
   '-DBUILD_opencv_hfs=OFF',
   '-DBUILD_opencv_java_bindings_generator=OFF',
   '-DBUILD_opencv_js=OFF',
-  '-DBUILD_opencv_img_hash=OFF',
   '-DBUILD_opencv_line_descriptor=OFF',
   '-DBUILD_opencv_optflow=OFF',
   '-DBUILD_opencv_phase_unwrapping=OFF',
